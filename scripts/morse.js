@@ -13,6 +13,10 @@ const translateMCToE = (inputString) => {
     console.log(inputString);
 }
 
+const assembleString = (input, mode) => {
+    console.log(input);
+}
+
 /*----------  Variable Declaration  ----------*/
 
 

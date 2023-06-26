@@ -3,7 +3,7 @@ import * as mc from '../scripts/morse.js'
 describe('Morse Code Translator Tests', () => {
 
     /*----------  Input Checking----------*/
-    test('Should be able to take in an input of any length', () => {
+    test('Should be able to take in an input of any length and translate it', () => {
         expect(mc.translateEToMC("Hello world!")).toBe(".... . .-.. .-.. --- / .-- --- .-. .-.. -.. -.-.--");
         expect(mc.translateEToMC("A")).toBe(".-");
         expect(mc.translateMCtoE(".-")).toBe("A");
@@ -32,5 +32,14 @@ describe('Morse Code Translator Tests', () => {
         expect(() => {
             mc.translateMCtoE('');
         }).toThrow(emptyInputError);
+    });
+
+
+    /*----------  Assembly Test  ----------*/
+    test('Should format English correctly', () => {
+        expect(mc.assembleString(["H", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d", "!"], 'english')).toEqual('Hello world!');
+    });
+    test('Should format Morse Code correctly', () => {
+        expect(mc.assembleString(["....", " ", ".", " ", ".-..", " ", ".-..", " ", "---", " ", "/", " ", ".--", " ", "---", " ", ".-.", " ", ".-..", " ", "-..", " ", "-.-.--"], 'morse')).toBe(".... . .-.. .-.. --- / .-- --- .-. .-.. -.. -.-.--");
     });
 })
