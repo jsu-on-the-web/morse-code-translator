@@ -1,4 +1,4 @@
-import { translateEToMC, translateMCtoE, assembleString } from '../scripts/morse.js'
+import { translateEToMC, translateMCtoE, assembleString } from './morse.js'
 import * as c from '../scripts/constants.js'
 
 describe('Morse Code Translator Tests', () => {
