@@ -41,6 +41,11 @@ export const translateEToMC = (inputString) => {
 translateEToMC("Hello world!")
 
 export const translateMCToE = (inputString) => {
+    // Init section
+    let output = [];
+    let MORSE_CODE_DICTIONARY_REVERSE = {};
+
+
     console.log(inputString);
     // Input check
     if (inputString.length <= 0) {
@@ -48,10 +53,23 @@ export const translateMCToE = (inputString) => {
     } else if (typeof inputString !== 'string') {
         throw c.wrongTypeError
     }
+
+    // Translation time 
 }
 
 export const assembleString = (input, mode) => {
+
+    // Check what mode we are in
+
+
     console.log(input);
+}
+
+export const flipKeysAndValues = (obj) => {
+    const entries = Object.entries(obj);
+    const flippedEntries = entries.map(entry => entry.reverse());
+    const output = Object.fromEntries(flippedEntries);
+    return output;
 }
 
 /*----------  Variable Declaration  ----------*/
