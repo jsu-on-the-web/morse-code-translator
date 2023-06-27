@@ -1,7 +1,7 @@
 
 /*----------  Imports  ----------*/
 import * as c from './constants.js'
-
+import * as gu from './generalUtils.js'
 
 /*----------  Function Declaration  ----------*/
 
@@ -43,8 +43,8 @@ translateEToMC("Hello world!")
 export const translateMCToE = (inputString) => {
     // Init section
     let output = [];
-    let MORSE_CODE_DICTIONARY_REVERSE = {};
-
+    let MORSE_CODE_DICTIONARY_REVERSE = gu.flipKeysAndValues(c.MORSE_CODE_DICTIONARY);
+    console.log(MORSE_CODE_DICTIONARY_REVERSE);
 
     console.log(inputString);
     // Input check
@@ -54,23 +54,28 @@ export const translateMCToE = (inputString) => {
         throw c.wrongTypeError
     }
 
+    // Because of how Morse code is written, we'll have to assemble the input array ourselves by splitting at spaces
+    // We'll also have to have a check for any spaces, and turn them into empty strings in the conversion step
+    let inputArray = inputString.split(' ');
+    console.log(inputArray);
+
     // Translation time 
+    // Using ES6 style for this one 
+    inputArray.forEach(mcLetter => {
+        if (mcLetter in MORSE_CODE_DICTIONARY_REVERSE) {
+            output.push(MORSE_CODE_DICTIONARY_REVERSE[mcLetter]);
+        } else if (mcLetter === " ") {
+            output.push('');
+        }
+    });
+    // TODO: assembleString here
+    console.log(output);
 }
 
-export const assembleString = (input, mode) => {
-
-    // Check what mode we are in
+translateMCToE(".... . .-.. .-.. --- / .-- --- .-. .-.. -.. -.-.--")
 
 
-    console.log(input);
-}
 
-export const flipKeysAndValues = (obj) => {
-    const entries = Object.entries(obj);
-    const flippedEntries = entries.map(entry => entry.reverse());
-    const output = Object.fromEntries(flippedEntries);
-    return output;
-}
 
 /*----------  Variable Declaration  ----------*/
 

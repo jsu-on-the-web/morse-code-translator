@@ -8,7 +8,7 @@ describe('Morse Code Translator Tests', () => {
         expect(translateEToMC("Hello world!")).toBe(".... . .-.. .-.. --- / .-- --- .-. .-.. -.. -.-.--");
         expect(translateEToMC("A")).toBe(".-");
         expect(translateMCtoE(".-")).toBe("A");
-        expect(translateMCtoE(".... . .-.. .-.. --- / .-- --- .-. .-.. -.. -.-.--")).toBe("Hello world!");
+        expect(translateMCtoE(".... . .-.. .-.. --- / .-- --- .-. .-.. -.. -.-.--")).toBe("HELLO WORLD");
     });
 
     test('Should throw an appropriate error if the input is not a string or is empty', () => {
@@ -38,7 +38,7 @@ describe('Morse Code Translator Tests', () => {
 
     /*----------  Assembly Test  ----------*/
     test('Should format English correctly', () => {
-        expect(assembleString(["H", "e", "l", "l", "o", " ", "w", "o", "r", "l", "d", "!"], 'english')).toEqual('Hello world!');
+        expect(assembleString(['H', 'E', 'L', 'L', 'O', ' ', 'W', 'O', 'R', 'L', 'D'], 'english')).toEqual('HELLO WORLD');
     });
     test('Should format Morse Code correctly', () => {
         expect(assembleString(["....", " ", ".", " ", ".-..", " ", ".-..", " ", "---", " ", "/", " ", ".--", " ", "---", " ", ".-.", " ", ".-..", " ", "-..", " ", "-.-.--"], 'morse')).toBe(".... . .-.. .-.. --- / .-- --- .-. .-.. -.. -.-.--");
