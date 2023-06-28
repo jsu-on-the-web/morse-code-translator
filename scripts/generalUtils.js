@@ -1,17 +1,18 @@
+import { invalidModeError } from "./constants.js";
+
 export const assembleString = (input, mode) => {
     let output = "";
-    
-    // Check what mode we are in
-    if (mode.toLowerCase() === 'english') {
-        // Not much to do here, just joining the strings inside input using reduce
+
+    if (mode === 'english' || mode === 'morse') {
         output = input.reduce((previousValue, currentValue) => {
             return previousValue + currentValue;
         });
         console.log(`Output string: ${output}`);
         return output;
+    } else {
+        throw invalidModeError;
     }
-
-    console.log(input);
+    
 }
 export const flipKeysAndValues = (obj) => {
     const entries = Object.entries(obj);

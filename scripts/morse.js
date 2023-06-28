@@ -36,6 +36,7 @@ export const translateEToMC = (inputString) => {
         // }
     });
     // TODO: assembleString here
+    return gu.assembleString(output, 'morse');
     console.log(output);
 }
 translateEToMC("Hello world!")
@@ -72,8 +73,6 @@ export const translateMCToE = (inputString) => {
 }
 
 translateMCToE(".... . .-.. .-.. --- / .-- --- .-. .-.. -.. -.-.--")
-
-
 
 
 /*----------  Variable Declaration  ----------*/
