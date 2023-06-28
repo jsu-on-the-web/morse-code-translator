@@ -1,27 +1,22 @@
 /*=============================================
 =            Generic Selectors            =
 =============================================*/
-
 body {
-	margin: 0;
-	background-image: linear-gradient(to bottom, #373c3f, #272729, #030303);
-    background-size: 100vw 100vh;
+  margin: 0;
+  background-image: linear-gradient(to bottom, #373c3f, #272729, #030303);
+  background-size: 100vw 100vh;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #00a268;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00a268;
 }
-
 
 /*=============================================
 =            Class selectors            =
 =============================================*/
-
 .input-form {
-    display: grid;
-}
-
-
+  display: grid;
+}/*# sourceMappingURL=styles.css.map */
