@@ -67,6 +67,7 @@ export const translateMCToE = (inputString) => {
         }
     });
     // TODO: assembleString here
+    return gu.assembleString(output, 'english');
     console.log(output);
 }
 
