@@ -64,8 +64,6 @@ export const translateMCToE = (inputString) => {
     inputArray.forEach(mcLetter => {
         if (mcLetter in MORSE_CODE_DICTIONARY_REVERSE) {
             output.push(MORSE_CODE_DICTIONARY_REVERSE[mcLetter]);
-        } else if (mcLetter === " ") {
-            output.push('');
         }
     });
     // TODO: assembleString here
