@@ -14,10 +14,10 @@ const grabInput = (event) => {
 
     let inputText = input.value;
     
-    if (document.querySelector('#eToMC').checked === true) { 
+    if (eToMCSelect.checked === true) { 
         console.log(`${inputText} will be translated to Morse Code`);
         output.value = m.translateEToMC(inputText);
-    } else if (document.querySelector('#mcToE').checked === true) {
+    } else if (mcToESelect.checked === true) {
         console.log(`${inputText} will be translated to English`);
         output.value = m.translateMCToE(inputText);
     }
@@ -27,7 +27,7 @@ const grabInput = (event) => {
 
 let submitButton = document.querySelector('.input-form__submit-button');
 let inputForm = document.querySelector('.input-form');
-let eToMCSelect = document.querySelector('#eToMC');
+let eToMCSelect = document.querySelector('#eToMc');
 let mcToESelect = document.querySelector('#mcToE');
 let input = document.querySelector('#input-textarea');
 let output = document.querySelector('#output-textarea');

@@ -5,8 +5,8 @@ describe('Morse Code Translator Tests', () => {
 
     /*----------  Input Checking----------*/
     test('Should be able to take in an input of any length and translate it', () => {
-        expect(translateEToMC("Hello world!")).toBe(".... . .-.. .-.. --- / .-- --- .-. .-.. -.. -.-.--");
-        expect(translateEToMC("A")).toBe(".-");
+        expect(translateEToMC("Hello world!")).toBe(".... . .-.. .-.. --- / .-- --- .-. .-.. -.. ");
+        expect(translateEToMC("A")).toBe(".- ");
         expect(translateMCtoE(".-")).toBe("A");
         expect(translateMCtoE(".... . .-.. .-.. --- / .-- --- .-. .-.. -.. -.-.--")).toBe("HELLO WORLD");
     });
