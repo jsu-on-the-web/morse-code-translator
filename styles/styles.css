@@ -68,4 +68,9 @@ label {
 .input-form {
   display: grid;
   width: 35vw;
+}
+.input-form__mode-select {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
 }/*# sourceMappingURL=styles.css.map */
