@@ -103,8 +103,19 @@ input[type="radio"]:checked::before {
   flex-direction: column;
   margin: 1rem;
 }
+.input-form__input label {
+  margin-bottom: 0.5rem;
+}
+.input-form__input label::after {
+  background-color: #01cf87;
+  width: -moz-max-content;
+  width: max-content;
+}
 .input-form__output {
   display: flex;
   flex-direction: column;
   margin: 1rem;
+}
+.input-form__output label {
+  margin-bottom: 0.5rem;
 }/*# sourceMappingURL=styles.css.map */

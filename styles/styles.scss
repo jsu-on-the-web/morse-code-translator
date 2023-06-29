@@ -102,11 +102,21 @@ input[type="radio"]:checked::before {
 		margin-bottom: 1rem;
 	}
 
-    &__input {
-        @include m.textarea-display;
-    }
+	&__input {
+		@include m.textarea-display;
+		label {
+			margin-bottom: 0.5rem;
+		}
+        label::after {
+            background-color: #01cf87;
+            width: max-content 
+        }
+	}
 
-    &__output {
-        @include m.textarea-display;
-    }
+	&__output {
+		@include m.textarea-display;
+		label {
+			margin-bottom: 0.5rem;
+		}
+	}
 }
