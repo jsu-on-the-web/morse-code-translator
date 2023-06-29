@@ -97,4 +97,14 @@ input[type="radio"]:checked::before {
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(2, auto);
   margin-bottom: 1rem;
+}
+.input-form__input {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.input-form__output {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
 }/*# sourceMappingURL=styles.css.map */

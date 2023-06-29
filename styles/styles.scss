@@ -2,6 +2,7 @@
 =            Imports            =
 =============================================*/
 @use "_colours.scss" as c;
+@use "_mixins.scss" as m;
 @import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Roboto&family=Roboto+Condensed&display=swap");
 
 /*=============================================
@@ -100,4 +101,12 @@ input[type="radio"]:checked::before {
 		grid-template-rows: repeat(2, auto);
 		margin-bottom: 1rem;
 	}
+
+    &__input {
+        @include m.textarea-display;
+    }
+
+    &__output {
+        @include m.textarea-display;
+    }
 }
