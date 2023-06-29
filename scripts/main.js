@@ -15,8 +15,10 @@ const grabInput = (event) => {
     let inputText = input.value;
     
     if (document.querySelector('#eToMC').checked === true) { 
+        console.log(`${inputText} will be translated to Morse Code`);
         output.value = m.translateEToMC(inputText);
     } else if (document.querySelector('#mcToE').checked === true) {
+        console.log(`${inputText} will be translated to English`);
         output.value = m.translateMCToE(inputText);
     }
 }
