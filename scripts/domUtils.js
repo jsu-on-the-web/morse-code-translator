@@ -37,6 +37,7 @@ const delayFunction = function (delay) {
 const pageTitle = "Morse Code Translator";
 const pageTitleMorseCode = "-- --- .-. ... . / -.-. --- -.. . / - .-. .- -. ... .-.. .- - --- .-."
 
+const header = document.querySelector('header');
 const title = document.querySelector(".title");
 const titleMorseCode = document.querySelector(".title--mc");
 
@@ -49,8 +50,13 @@ setTimeout(() => {
     typingEffect(pageTitleMorseCode, ".title--mc", 30);
 }, 1300);
 
-title.addEventListener("click", () => { 
-    title.style.opacity = 0;
-    titleMorseCode.style.opacity = 1;
+header.addEventListener('click', () => {
+    if (title.style.opacity == 1) {
+        title.style.opacity = 0;
+        titleMorseCode.style.opacity = 1;
+    } else {
+        title.style.opacity = 1;
+        titleMorseCode.style.opacity = 0;
+    }
 })
 
