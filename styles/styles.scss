@@ -14,7 +14,7 @@ body {
 	margin: 0;
 	background-image: linear-gradient(to bottom, #373c3f, #272729, #030303);
 	background-size: 100vw 100vh;
-	color: #01cf87;
+	color: c.$text-green;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -38,7 +38,7 @@ header {
 		transition: opacity 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
 
 		&:hover {
-			text-shadow: 2px 4px 4px #000000;
+			text-shadow: 2px 4px 4px black;
 		}
 	}
 
@@ -53,7 +53,7 @@ header {
 
 		
 		&:hover {
-			text-shadow: 2px 4px 4px #000000;
+			text-shadow: 2px 4px 4px black;
 		}
 	}
 }
@@ -70,7 +70,7 @@ button {
 	font-family: "Roboto Condensed", sans-serif;
 }
 button:hover {
-	background-color: #28f7ae;
+	background-color: c.$button-green;
 	border-color: c.$text-green;
 }
 button:focus,

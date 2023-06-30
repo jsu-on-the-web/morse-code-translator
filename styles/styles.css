@@ -55,7 +55,7 @@ header .title {
   transition: opacity 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
 }
 header .title:hover {
-  text-shadow: 2px 4px 4px #000000;
+  text-shadow: 2px 4px 4px black;
 }
 header .title--mc {
   position: absolute;
@@ -66,7 +66,7 @@ header .title--mc {
   transition: opacity 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
 }
 header .title--mc:hover {
-  text-shadow: 2px 4px 4px #000000;
+  text-shadow: 2px 4px 4px black;
 }
 
 button {
