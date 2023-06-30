@@ -52,14 +52,21 @@ header {
 }
 header .title {
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+}
+header .title:hover {
+  text-shadow: 2px 4px 4px #000000;
 }
 header .title--mc {
   position: absolute;
   top: 21.5vh;
   left: 28vw;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+  transition: opacity 0.5s ease-in-out, text-shadow 0.5s ease-in-out;
+}
+header .title--mc:hover {
+  text-shadow: 2px 4px 4px #000000;
 }
 
 button {

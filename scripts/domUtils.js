@@ -54,9 +54,13 @@ header.addEventListener('click', () => {
     if (title.style.opacity == 1) {
         title.style.opacity = 0;
         titleMorseCode.style.opacity = 1;
+        title.style.pointerEvents = 'none';
+        titleMorseCode.style.pointerEvents = 'all';
     } else {
         title.style.opacity = 1;
         titleMorseCode.style.opacity = 0;
+        titleMorseCode.style.pointerEvents = 'none';
+        title.style.pointerEvents = 'all';
     }
 })
 
