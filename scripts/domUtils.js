@@ -35,10 +35,22 @@ const delayFunction = function (delay) {
 =============================================*/
 
 const pageTitle = "Morse Code Translator";
+const pageTitleMorseCode = "-- --- .-. ... . / -.-. --- -.. . / - .-. .- -. ... .-.. .- - --- .-."
 
+const title = document.querySelector(".title");
+const titleMorseCode = document.querySelector(".title--mc");
 
 /*=============================================
 =            Script Assignment            =
 =============================================*/
 
 typingEffect(pageTitle, ".title", 30);
+setTimeout(() => {
+    typingEffect(pageTitleMorseCode, ".title--mc", 30);
+}, 1300);
+
+title.addEventListener("click", () => { 
+    title.style.opacity = 0;
+    titleMorseCode.style.opacity = 1;
+})
+
