@@ -3,6 +3,7 @@
 =============================================*/
 @use "_colours.scss" as c;
 @use "_mixins.scss" as m;
+@use "_animations.scss" as a;
 @import url("https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Roboto&family=Roboto+Condensed&display=swap");
 
 /*=============================================
@@ -26,10 +27,11 @@ main {
 	align-items: center;
 	flex-direction: column;
 	font-family: "Roboto", sans-serif;
-	margin-top: 30vh;
+	margin-top: 20vh;
 }
 header {
 	text-align: center;
+	font-size: 30pt;
 	font-family: "Agdasima", sans-serif;
 }
 
@@ -96,27 +98,35 @@ input[type="radio"]:checked::before {
 	width: 35vw;
 
 	&__mode-select {
+		@include a.fade-in-left-animate(1s, 0.7s);
 		display: grid;
 		grid-template-columns: repeat(2, auto);
 		grid-template-rows: repeat(2, auto);
 		margin-bottom: 1rem;
+		opacity: 0;
 	}
 
 	&__input {
 		@include m.textarea-display;
+		@include a.fade-in-down-animate(1s, 1.2s);
 		label {
-			margin-bottom: 0.5rem;
+			@include m.input-label;
 		}
-        label::after {
-            background-color: #01cf87;
-            width: max-content 
-        }
+		opacity: 0;
 	}
 
 	&__output {
 		@include m.textarea-display;
+				@include a.fade-in-down-animate(1s, 1.5s);
 		label {
-			margin-bottom: 0.5rem;
+			@include m.input-label;
 		}
+		opacity: 0;
+	}
+
+	&__submit-button {
+		@include a.fade-in-down-animate(1s, 1.8s);
+		opacity: 0;
+		margin-top: 1rem;
 	}
 }
