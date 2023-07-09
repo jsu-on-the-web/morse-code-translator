@@ -1,0 +1,10 @@
+@mixin textarea-display {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem;
+}
+
+@mixin input-label {
+	margin-bottom: 0.5rem;
+	font-size: 20pt;
+}

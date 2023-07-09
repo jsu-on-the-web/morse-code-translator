@@ -9,7 +9,32 @@
 </head>
 
 <body>
+    <main>
+        <header>
+            <h1 class="title"></h1>
+            <h2 class="title--mc"></h2>
 
+        </header>
+        <form action="" class="input-form">
+            <div class="input-form__mode-select">
+
+                <input type="radio" name="mode-select" id="EnglishToMorseCode" value="EnglishToMorseCode" checked=true>
+                <label for="EnglishToMorseCode">English → Morse Code</label>
+
+                <input type="radio" name="mode-select" id="morseCodeToEnglish" value="morseCodeToEnglish">
+                <label for="morseCodeToEnglish">Morse Code → English</label>
+            </div>
+            <div class = "input-form__input">
+                <label for="input">Input</label>
+                <textarea name="input" id="input-textarea" cols="25" rows="10"></textarea>
+            </div>
+            <div class = "input-form__output"><label for="output">Output</label>
+            <textarea name="output" id="output-textarea" cols="25" rows="10"></textarea></div>
+            <br />
+            <button class="input-form__submit-button" type="submit">Translate!</button>
+        </form>
+    </main>
 </body>
+<script type="module" defer src="./scripts/main.js"></script>
 
 </html>
