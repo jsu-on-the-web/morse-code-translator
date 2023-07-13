@@ -17,7 +17,7 @@ const grabInput = (event) => {
     if (englishToMorseCodeSelect.checked === true) { 
         console.log(`${inputText} will be translated to Morse Code`);
         output.value = m.translateEToMC(inputText);
-    } else if (morseCodeToEnglishSelect.checked === true) {
+    } else  {
         console.log(`${inputText} will be translated to English`);
         output.value = m.translateMCToE(inputText);
     }
